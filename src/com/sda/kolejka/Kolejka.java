@@ -1,27 +1,21 @@
 package com.sda.kolejka;
 
+import java.util.Arrays;
+
 public class Kolejka {
 
     int[] tablica = new int[10];
     int koniecTablicy = 0;
 
+    public void add(int liczba) {
+        tablica[koniecTablicy] = liczba;
+        koniecTablicy++;
+    }
 
     @Override
     public String toString() {
         return "Kolejka{" +
-                "koniecTablicy=" + koniecTablicy +
+                "tablica=" + Arrays.toString(tablica) +
                 '}';
     }
-
-    public void add(int liczba) {
-        tablica[koniecTablicy] = liczba;
-        koniecTablicy++;
-
-
-    }
-
-
-
-
-
-    }
+}

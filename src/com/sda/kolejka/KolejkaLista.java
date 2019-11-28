@@ -8,21 +8,25 @@ public class KolejkaLista {
 
     List<Integer> lista = new LinkedList();
 
-    public void add(int liczba){
+    public void add(int liczba) {
         lista.add(liczba);
+    }
 
-
+    @Override
+    public String toString() {
+        return "KolejkaLista{" +
+                "lista=" + lista +
+                '}';
     }
 
     public int pop() {
         return lista.get(0);
     }
-    public int push(){
 
+    public int push() {
         int pierwszy = lista.get(0);
         lista.remove(0);
         return pierwszy;
-
 
     }
 }
